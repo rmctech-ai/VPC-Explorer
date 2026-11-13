@@ -289,3 +289,7 @@ tr.cur td:first-child{box-shadow:inset 3px 0 0 var(--blue)}
 @media (max-width:1180px){.lab{grid-template-columns:1fr;position:static;padding:48px 12px 80px}}
 
 td.cmdc{max-width:560px;overflow:hidden;text-overflow:ellipsis}
+.labout details.stp{margin:0}
+.labout details.stp summary{cursor:pointer;list-style:none}
+.labout details.stp summary::-webkit-details-marker{display:none}
+.labout pre.slog{margin:2px 0 4px 14px;padding:6px 8px;background:var(--term);color:#cfe0ff;border-radius:5px;font-size:11px;white-space:pre-wrap;word-break:break-word}
