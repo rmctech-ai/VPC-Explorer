@@ -111,12 +111,12 @@ window.LAB = (function () {
     const cfg = () => { try { return JSON.parse(ta.value); } catch (e) { throw new Error('JSON error: ' + e.message); } };
     const out = body.querySelector('#labOut');
     body.querySelector('#traceBtn').onclick = () => { try { const r = VPC.trace(cfg(), { from: body.querySelector('#pF').value, to: body.querySelector('#pT').value, proto: body.querySelector('#pP').value, port: +body.querySelector('#pN').value });
-        out.innerHTML = `<div class="dec ${r.ok ? 'allow' : 'deny'}">${r.ok ? '✓ PACKET DELIVERED (and the reply gets back)' : '✕ PACKET DROPPED'}</div>` + r.hops.map((h, i) => `<div class="hop ${h.ok ? 'ok' : 'no'}"><b>${i + 1}</b><span>${esc(h.t)}</span></div>`).join('');
+        out.innerHTML = `<div class="dec ${r.ok ? 'allow' : 'deny'}">${r.ok ? '✓ PACKET DELIVERED (and the reply gets back)' : '✕ PACKET DROPPED'}</div>` + r.hops.map((h, i) => `<div class="hop ${h.ok ? 'ok' : 'bad'}"><b>${i + 1}</b><span>${esc(h.t)}</span></div>`).join('');
       } catch (e) { out.innerHTML = `<div class="dec err">✕ ${esc(e.message)}</div>`; } };
     const rb = body.querySelector('#runBtn');
     if (rb) rb.onclick = () => { try { const c = cfg(); let pass = 0;
         const rows = ch.tests.map(t => { const r = VPC.trace(c, t); const ok = r.ok === t.expect; if (ok) pass++; const last = r.hops[r.hops.length - 1];
-          return `<div class="tr ${ok ? 'ok' : 'no'}">${ok ? '✓' : '✕'} ${esc(t.from)} → ${esc(t.to)} ${t.proto}/${t.port}: ${r.ok ? 'DELIVERED' : 'DROPPED'} <i>(expected ${t.expect ? 'DELIVERED' : 'DROPPED'})</i>${!ok && last ? `<br><span class="cm">↳ ${esc(last.t)}</span>` : ''}</div>`; }).join('');
+          return `<div class="tr ${ok ? 'ok' : 'bad'}">${ok ? '✓' : '✕'} ${esc(t.from)} → ${esc(t.to)} ${t.proto}/${t.port}: ${r.ok ? 'DELIVERED' : 'DROPPED'} <i>(expected ${t.expect ? 'DELIVERED' : 'DROPPED'})</i>${!ok && last ? `<br><span class="cm">↳ ${esc(last.t)}</span>` : ''}</div>`; }).join('');
         out.innerHTML = `<div class="dec ${pass === ch.tests.length ? 'allow' : 'deny'}">${pass}/${ch.tests.length} tests pass</div>` + rows;
         if (pass === ch.tests.length) api.solve(l.id); else api.toast('Not yet: read the ✕ lines');
       } catch (e) { out.innerHTML = `<div class="dec err">✕ ${esc(e.message)}</div>`; } };

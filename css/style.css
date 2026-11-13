@@ -278,15 +278,14 @@ tr.cur td:first-child{box-shadow:inset 3px 0 0 var(--blue)}
 .dec.err{background:color-mix(in srgb,var(--red) 14%,transparent);color:var(--red);font-size:12px}
 .labout .why{margin-bottom:6px;color:var(--ink)}
 .labout .tr{padding:2px 0;border-bottom:1px dashed var(--line)}
-.labout .tr.ok{color:var(--green)} .labout .tr.no{color:var(--red)} .labout .tr.skip{color:var(--mute)}
-.labout .tr.no{display:block;width:auto;height:auto;border-radius:0;font-size:inherit;font-weight:inherit;place-items:normal}
+.labout .tr.ok{color:var(--green)} .labout .tr.bad{color:var(--red)} .labout .tr.skip{color:var(--mute)}
 .labout .tr i{color:var(--mute)}
 .lab details.fx{border:1px dashed var(--amber);border-radius:6px;padding:4px 8px;font-size:11px}
 .lab details.fx summary{cursor:pointer;font-weight:700;color:#b45309}
 .lab details.fx pre{margin:6px 0 0;white-space:pre-wrap;font-size:11px}
 .hop{display:flex;gap:8px;align-items:flex-start;padding:4px 0;border-bottom:1px dashed var(--line)}
 .hop b{min-width:22px;height:22px;border-radius:50%;display:grid;place-items:center;color:#fff;font-size:10px}
-.hop.ok b{background:var(--green)} .hop.no b{background:var(--red)}
+.hop.ok b{background:var(--green)} .hop.bad b{background:var(--red)}
 @media (max-width:1180px){.lab{grid-template-columns:1fr;position:static;padding:48px 12px 80px}}
 
 td.cmdc{max-width:560px;overflow:hidden;text-overflow:ellipsis}
