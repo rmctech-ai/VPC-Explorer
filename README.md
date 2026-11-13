@@ -3,7 +3,7 @@
 An interactive, step-by-step course on **Amazon VPC networking** for Cloud Engineers and Cloud Security learners. Every lesson animates packets through Internet Gateways, route tables, NAT, Security Groups and NACLs, with analogies, memory hooks, trigger words, quizzes, and a **Packet Tracer lab** that walks a packet hop by hop (including the stateless NACL return path) so you can fix broken networks yourself.
 
 > Created by **Raul** ([@rmctech-ai](https://github.com/rmctech-ai)) · Freelance AI Automation Specialist on the path to Cloud Security.
-> Part of the Explorer series: [Linux Explorer](https://github.com/rmctech-ai/linux-explorer) · [Python Explorer](https://github.com/rmctech-ai/python-explorer) · [IAM Explorer](https://github.com/rmctech-ai/iam-explorer) · [IaC Explorer](https://github.com/rmctech-ai/iac-explorer) · [Serverless Explorer](https://github.com/rmctech-ai/serverless-explorer) · [CI/CD Explorer](https://github.com/rmctech-ai/cicd-explorer) · [Cloud Security Explorer](https://github.com/rmctech-ai/cloudsecurity-explorer) · [Well-Architected Explorer](https://github.com/rmctech-ai/wellarchitected-explorer) · [Security Journey Explorer](https://github.com/rmctech-ai/aws-security-journey) · [n8n Explorer](https://github.com/rmctech-ai/n8n-explorer) · [Claude Code Explorer](https://github.com/rmctech-ai/claudecode-explorer).
+> Part of the Explorer series: [Linux Explorer](https://github.com/rmctech-ai/linux-explorer) · [Python Explorer](https://github.com/rmctech-ai/python-explorer) · [IAM Explorer](https://github.com/rmctech-ai/iam-explorer) · [IaC Explorer](https://github.com/rmctech-ai/iac-explorer) · [Serverless Explorer](https://github.com/rmctech-ai/serverless-explorer) · [CI/CD Explorer](https://github.com/rmctech-ai/cicd-explorer) · [Cloud Security Explorer](https://github.com/rmctech-ai/cloudsecurity-explorer) · [Well-Architected Explorer](https://github.com/rmctech-ai/wellarchitected-explorer) · [Security Journey Explorer](https://github.com/rmctech-ai/aws-security-journey) · [n8n Explorer](https://github.com/rmctech-ai/n8n-explorer) · [Claude Code Explorer](https://github.com/rmctech-ai/claudecode-explorer) · [SAA Explorer](https://github.com/rmctech-ai/saa-explorer).
 > 🏠 Part of **[Raul's Cloud Learning Hub](https://rmctech-ai.github.io/)** · Live course: https://rmctech-ai.github.io/VPC-Explorer/
 > The Explorer course format is inspired by [Protocol Explorer](https://protocol-explorer-alpha.vercel.app/) by Dilum Sanjaya. All lessons, labs and study tools are my own work.
 
@@ -23,10 +23,10 @@ python3 -m http.server 8000     # then open http://localhost:8000
 ```bash
 git init && git add . && git commit -m "VPC Explorer"
 git branch -M main
-git remote add origin https://github.com/rmctech-ai/vpc-explorer.git
+git remote add origin https://github.com/rmctech-ai/VPC-Explorer.git
 git push -u origin main
 ```
-GitHub → **Settings → Pages → Deploy from a branch → `main` / root → Save** → `https://rmctech-ai.github.io/vpc-explorer/`
+GitHub → **Settings → Pages → Deploy from a branch → `main` / root → Save** → `https://rmctech-ai.github.io/VPC-Explorer/`
 
 ---
 
